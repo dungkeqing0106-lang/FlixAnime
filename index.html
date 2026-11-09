@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08090d"><link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./assets/flixanime-logo.png"><link rel="stylesheet" href="./style.css">
+<title>FlixAnime – Khám phá anime</title>
+</head>
+<body>
+<header class="topbar">
+ 
+ <a class="brand" href="#home"><img src="./assets/flixanime-logo.png" alt=""><span>Flix<span>Anime</span></span></a>
+ <div class="top-search"><span>⌕</span><input id="searchInput" placeholder="Tìm anime, phim..." autocomplete="off"><button id="searchGo">Tìm</button></div>
+ <button class="avatar-mini" id="profileShortcut">👤</button>
+</header>
+<main id="home" class="main">
+ <section class="hero-wrap">
+  <div class="hero" id="hero">
+   <div class="hero-backdrop"></div>
+   <div class="hero-copy"><span class="eyebrow">FLIXANIME ORIGINAL PICKS</span><h1 id="heroTitle">Khám phá thế giới Anime</h1>
+   <p id="heroDesc">Những bộ anime nổi bật đang chờ bạn khám phá.</p>
+   <div class="hero-buttons"><button class="watch-btn" id="heroWatch">▶ Xem ngay</button><button class="detail-btn" id="heroDetail">＋ Chi tiết</button></div></div>
+   <div class="hero-pagination" id="heroDots"></div>
+   <button class="hero-arrow prev" id="heroPrev" aria-label="Phim trước">‹</button><button class="hero-arrow next" id="heroNext" aria-label="Phim tiếp">›</button>
+  </div>
+ </section>
+ <section class="search-results section hidden" id="searchSection"><div class="section-head"><div><span class="eyebrow">KẾT QUẢ</span><h2>Tìm kiếm anime</h2></div></div><div class="poster-grid" id="searchResults"></div></section>
+ <section class="section" id="new"><div class="section-head"><div><span class="eyebrow">VỪA CẬP NHẬT</span><h2>Phim mới nhất</h2></div><a href="https://animevietsub.best" target="_blank">Xem tất cả →</a></div><div class="poster-row" id="newList"></div></section>
+ <section class="section" id="hot"><div class="section-head"><div><span class="eyebrow">ĐƯỢC QUAN TÂM</span><h2>Phim hot</h2></div><a href="https://animevietsub.best" target="_blank">Xem tất cả →</a></div><div class="poster-row" id="hotList"></div></section>
+ <section class="section top-section"><div class="section-head"><div><span class="eyebrow">BẢNG XẾP HẠNG</span><h2>Top 10 phim hot</h2></div></div><div class="top-ten" id="topList"></div></section>
+ <section class="section" id="romance"><div class="section-head"><div><span class="eyebrow">CẢM XÚC & LÃNG MẠN</span><h2>Phim Romance</h2></div><a href="https://animevietsub.best" target="_blank">Xem tất cả →</a></div><div class="poster-row" id="romanceList"></div></section>
+ <section class="section" id="sports"><div class="section-head"><div><span class="eyebrow">BỨT PHÁ GIỚI HẠN</span><h2>Phim Sports</h2></div><a href="https://animevietsub.best" target="_blank">Xem tất cả →</a></div><div class="poster-row" id="sportsList"></div></section>
+ <section class="section" id="phimle"><div class="section-head"><div><span class="eyebrow">MOVIE COLLECTION</span><h2>Phim lẻ</h2></div></div><div class="poster-row" id="movieList"></div></section>
+ <section class="section" id="phimbo"><div class="section-head"><div><span class="eyebrow">SERIES COLLECTION</span><h2>Phim bộ</h2></div></div><div class="poster-row" id="seriesList"></div></section>
+ <section class="section" id="theloai"><div class="section-head"><div><span class="eyebrow">CHỌN THEO SỞ THÍCH</span><h2>Thể loại</h2></div></div><div class="genre-chips"><a href="#romance">Romance</a><a href="#sports">Sports</a><a href="#hot">Hành động</a><a href="#new">Phiêu lưu</a><a href="#hot">Fantasy</a><a href="#new">Hài hước</a></div></section>
+ <section class="section personal" id="personal"><div class="section-head"><div><span class="eyebrow">YOUR SPACE</span><h2>Cá nhân</h2></div></div>
+  <div class="profile-card glass"><div class="profile-avatar" id="profileAvatar">👤</div><div class="profile-info"><h3 id="displayName">Khách</h3><p id="accountState">Đăng nhập để đồng bộ trải nghiệm của bạn</p></div><button class="login-btn" id="loginOpen">Đăng nhập / Đăng ký</button></div>
+  <div class="personal-columns"><div><h3>♡ Yêu thích</h3><div class="poster-row compact" id="favoriteList"><p class="empty">Chưa có phim yêu thích.</p></div></div><div><h3>◷ Lịch sử xem</h3><div class="poster-row compact" id="historyList"><p class="empty">Chưa có lịch sử xem.</p></div></div></div>
+ </section>
+ <footer><span>© 2026 FlixAnime</span><span>Nguồn nội dung: AnimeVietsub · AniMapper thử nghiệm</span></footer>
+</main>
+<nav class="bottom-nav glass"><a class="active" href="#home"><b>⌂</b>Trang chủ</a><a href="#phimle"><b>▣</b>Phim lẻ</a><a href="#theloai"><b>⌕</b>Thể loại</a><a href="#personal"><b>♡</b>Cá nhân</a></nav>
+<div class="modal hidden" id="accountModal"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><h2>Tài khoản FlixAnime</h2><label>Ảnh đại diện<input type="file" id="avatarUpload" accept="image/*"></label><label>Tên hiển thị<input id="nameInput" placeholder="Tên của bạn"></label><label>Email<input id="emailInput" type="email" placeholder="email@example.com"></label><label>Mật khẩu<input id="passwordInput" type="password" placeholder="Mật khẩu"></label><button class="watch-btn full" id="saveProfile">Lưu thông tin</button><small>Đây là hồ sơ lưu trên thiết bị. Đăng nhập/xác thực thật cần máy chủ tài khoản.</small></div></div>
+<div class="modal hidden" id="detailModal"><div class="modal-card"><button class="modal-close" id="detailClose">×</button><h2 id="detailTitle">Thông tin anime</h2><p id="detailText">Thông tin anime.</p><button class="watch-btn full" id="detailPlay">▶ Xem danh sách tập</button></div></div>
+<div class="toast" id="toast"></div>
+<script src="./app.js"></script>
+</body></html>

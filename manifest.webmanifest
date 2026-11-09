@@ -1,0 +1,16 @@
+{
+  "name": "FlixAnime",
+  "short_name": "FlixAnime",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090711",
+  "theme_color": "#090711",
+  "description": "Khám phá anime cùng FlixAnime",
+  "icons": [
+    {
+      "src": "./assets/flixanime-logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
